@@ -158,6 +158,13 @@
         font-size: 22px;
         font-weight: 800;
       }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+      }
       .socials {
         display: flex;
         gap: 10px;
@@ -312,7 +319,9 @@
           </div>
 
           <aside class="profile">
-            <div class="avatar">RB</div>
+            <div class="avatar">
+              <img src="richie.png" alt="Profile photo" />
+            </div>
             <div style="text-align: center">
               <div style="font-weight: 800">Richie Brian</div>
               <div style="color: var(--muted); font-size: 13px">
@@ -405,6 +414,8 @@
               <div class="skill">Express</div>
               <div class="skill">MongoDB</div>
               <div class="skill">JavaScript</div>
+              <div class="skill">React</div>
+              <div class="skill">SQL</div>
               <div class="skill">Tailwind CSS</div>
               <div class="skill">HTML/CSS</div>
               <div class="skill">Git & CI</div>
@@ -484,18 +495,22 @@
 
                 <div style="display: flex; gap: 8px">
                   <button class="btn" type="submit">Send</button>
-                  <button
-                    type="button"
+                  <a
+                    href="mailto:briankanambo308@gmail.com"
                     style="
+                      display: inline-block;
+                      text-align: center;
                       background: transparent;
                       border: 1px solid rgba(255, 255, 255, 0.04);
                       padding: 10px;
                       border-radius: 10px;
                       color: var(--muted);
+                      text-decoration: none;
+                      line-height: 1;
                     "
                   >
                     Or email me
-                  </button>
+                  </a>
                 </div>
               </form>
               <div
@@ -509,15 +524,15 @@
               <div style="color: var(--muted); font-size: 13px">
                 Email:
                 <a
-                  href="mailto:you@example.com"
+                  href="mailto:briankanambo308@gmail.com"
                   style="color: var(--accent); text-decoration: none"
-                  >you@example.com</a
+                  >briankanambo308@gmail.com</a
                 >
               </div>
               <div
                 style="color: var(--muted); font-size: 13px; margin-top: 8px"
               >
-                Phone: +254 7XXXXXXXX
+                Phone: 0114088623
               </div>
               <div
                 style="color: var(--muted); font-size: 13px; margin-top: 12px"
