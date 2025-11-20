@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Your Name — Portfolio</title>
+    <!-- Ensure viewport meta tag is present for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ritchie Brian — Portfolio</title>
     <meta
       name="description"
       content="Professional portfolio showcasing projects, skills and contact information."
@@ -244,6 +245,10 @@
         .profile {
           order: -1;
         }
+        /* ADDED: Collapse the contact section grid to 1 column on tablets/mid-size screens */
+        #contact .grid {
+          grid-template-columns: 1fr;
+        }
       }
       @media (max-width: 560px) {
         .grid {
@@ -255,6 +260,15 @@
         }
         .brand h1 {
           font-size: 16px;
+        }
+        /* Ensure cta-row wraps nicely on small screens */
+        .cta-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .cta-row > a {
+          width: 100%;
+          text-align: center;
         }
       }
 
@@ -320,7 +334,12 @@
 
           <aside class="profile">
             <div class="avatar">
-              <img src="richie.png" alt="Profile photo" />
+              <!-- Placeholder image for profile photo -->
+              <img
+                src="https://placehold.co/120x120/0B1220/94A3B8?text=RB"
+                alt="Profile photo"
+                onerror="this.onerror=null;this.src='https://placehold.co/120x120/0B1220/94A3B8?text=RB';"
+              />
             </div>
             <div style="text-align: center">
               <div style="font-weight: 800">Richie Brian</div>
@@ -431,6 +450,7 @@
 
         <section id="contact">
           <h3>Contact</h3>
+          <!-- The grid in contact section will now collapse on smaller screens due to the new media query -->
           <div
             class="grid"
             style="grid-template-columns: 1fr 320px; align-items: start"
